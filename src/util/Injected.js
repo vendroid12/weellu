@@ -14,7 +14,7 @@ exports.ExposeStore = (moduleRaidStr) => {
     window.Store.CryptoLib = window.mR.findModule('decryptE2EMedia')[0];
     window.Store.DownloadManager = window.mR.findModule('downloadManager')[0].downloadManager;
     window.Store.Features = window.mR.findModule('FEATURE_CHANGE_EVENT')[0].GK;
-    window.Store.genId = window.mR.findModule('newTag')[0].newTag;
+    window.Store.genId = window.mR.findModule('newTag')?.[0]?.newTag || null;
     window.Store.GroupMetadata = window.mR.findModule((module) => module.default && module.default.handlePendingInvite)[0].default;
     window.Store.Invite = window.mR.findModule('sendJoinGroupViaInvite')[0];
     window.Store.InviteInfo = window.mR.findModule('sendQueryGroupInvite')[0];
@@ -27,7 +27,7 @@ exports.ExposeStore = (moduleRaidStr) => {
     window.Store.MsgKey = window.mR.findModule((module) => module.default && module.default.fromString)[0].default;
     window.Store.MessageInfo = window.mR.findModule('sendQueryMsgInfo')[0];
     window.Store.OpaqueData = window.mR.findModule(module => module.default && module.default.createFromData)[0].default;
-    window.Store.QueryExist = window.mR.findModule(module => typeof module.default === 'function' && module.default.toString().includes('Should not reach queryExists MD'))[0].default;
+    window.Store.QueryExist = window.mR.findModule(module => typeof module.default === 'function' && module.default.toString().includes('Should not reach'))[0].default;
     window.Store.QueryProduct = window.mR.findModule('queryProduct')[0];
     window.Store.QueryOrder = window.mR.findModule('queryOrder')[0];
     window.Store.SendClear = window.mR.findModule('sendClear')[0];
@@ -72,6 +72,10 @@ exports.ExposeStore = (moduleRaidStr) => {
 
 exports.LoadUtils = () => {
     window.WWebJS = {};
+
+    if(!window.Store.genId) {
+        window.Store.genId = window.Store.MsgKey.newId;
+    }
 
     window.WWebJS.sendSeen = async (chatId) => {
         let chat = window.Store.Chat.get(chatId);
