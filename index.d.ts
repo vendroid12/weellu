@@ -260,6 +260,11 @@ declare namespace WAWebJS {
 
     /** Current connection information */
     export interface ClientInfo {
+        /** 
+         * Current user ID 
+         * @deprecated Use .wid instead 
+         */
+        me: ContactId
         /** Current user ID */
         wid: ContactId
         /** 
@@ -353,6 +358,8 @@ declare namespace WAWebJS {
      * Local directory-based authentication
      */
     export class LocalAuth extends AuthStrategy {
+        public clientId?: string;
+        public dataPath?: string;
         constructor(options?: {
             clientId?: string,
             dataPath?: string
@@ -366,7 +373,7 @@ declare namespace WAWebJS {
      export class LegacySessionAuth extends AuthStrategy {
         constructor(options?: {
             session?: ClientSession,
-            restartOnAuth?: boolean,
+            restartOnAuthFail?: boolean,
         })
     }
 
@@ -709,11 +716,11 @@ declare namespace WAWebJS {
         /**
          * Gets the order associated with a given message
          */
-        getOrder: () => Order,
+        getOrder: () => Promise<Order>,
         /**
          * Gets the payment details associated with a given message
          */
-        getPayment: () => Payment,
+        getPayment: () => Promise<Payment>,
     }
 
     /** ID that represents a message */

@@ -1,33 +1,35 @@
 {
-  "name": "whatsapp-web.js",
-  "version": "1.16.0",
-  "description": "Library for interacting with the WhatsApp Web API ",
-  "main": "./index.js",
-  "typings": "./index.d.ts",
-  "scripts": {
-    "test": "mocha tests --recursive --timeout 5000",
-    "test-single": "mocha",
-    "shell": "node --experimental-repl-await ./shell.js",
-    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  "_from": "whatsapp-web.js",
+  "_id": "whatsapp-web.js@1.16.4",
+  "_inBundle": false,
+  "_integrity": "sha512-cN4ncwqnR3aMmltXtPRwQTfjwQGNmSFDnfaQ4pm3EpqbHWAzvxBlxaWFCWcZQnbUmPRvnVCEky1C9LvV+ePq3Q==",
+  "_location": "/whatsapp-web.js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "whatsapp-web.js",
+    "name": "whatsapp-web.js",
+    "escapedName": "whatsapp-web.js",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pedroslopez/whatsapp-web.js.git"
-  },
-  "keywords": [
-    "whatsapp",
-    "whatsapp-web",
-    "api",
-    "bot",
-    "client",
-    "node"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "Pedro Lopez",
-  "license": "Apache-2.0",
+  "_resolved": "https://registry.npmjs.org/whatsapp-web.js/-/whatsapp-web.js-1.16.4.tgz",
+  "_shasum": "63a3339fa8b275b87c779014ceb2826618bad09a",
+  "_spec": "whatsapp-web.js",
+  "_where": "C:\\Users\\user1\\Desktop\\wwww\\WhatsApp-Bot\\BTN TESTS",
+  "author": {
+    "name": "Pedro Lopez"
+  },
   "bugs": {
     "url": "https://github.com/pedroslopez/whatsapp-web.js/issues"
   },
-  "homepage": "https://wwebjs.dev/",
+  "bundleDependencies": false,
   "dependencies": {
     "@pedroslopez/moduleraid": "^5.0.2",
     "fluent-ffmpeg": "^2.1.2",
@@ -37,6 +39,8 @@
     "node-webpmux": "^3.1.0",
     "puppeteer": "^13.0.0"
   },
+  "deprecated": false,
+  "description": "Library for interacting with the WhatsApp Web API ",
   "devDependencies": {
     "@types/node-fetch": "^2.5.12",
     "chai": "^4.3.4",
@@ -51,5 +55,29 @@
   },
   "engines": {
     "node": ">=12.0.0"
-  }
+  },
+  "homepage": "https://wwebjs.dev/",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-web",
+    "api",
+    "bot",
+    "client",
+    "node"
+  ],
+  "license": "Apache-2.0",
+  "main": "./index.js",
+  "name": "whatsapp-web.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroslopez/whatsapp-web.js.git"
+  },
+  "scripts": {
+    "generate-docs": "jsdoc --configure .jsdoc.json --verbose",
+    "shell": "node --experimental-repl-await ./shell.js",
+    "test": "mocha tests --recursive --timeout 5000",
+    "test-single": "mocha"
+  },
+  "typings": "./index.d.ts",
+  "version": "1.16.4"
 }
