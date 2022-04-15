@@ -40,7 +40,7 @@ exports.ExposeStore = (moduleRaidStr) => {
     window.Store.VCard = window.mR.findModule('vcardFromContactModel')[0];
     window.Store.Wap = window.mR.findModule('queryLinkPreview')[0].default;
     window.Store.WidFactory = window.mR.findModule('createWid')[0];
-    window.Store.getProfilePicFull = window.mR.findModule('getProfilePicFull')[0].getProfilePicFull;
+    window.Store.ProfilePic = window.mR.findModule('profilePicResync')[0];
     window.Store.PresenceUtils = window.mR.findModule('sendPresenceAvailable')[0];
     window.Store.ChatState = window.mR.findModule('sendChatStateComposing')[0];
     window.Store.GroupParticipants = window.mR.findModule('sendPromoteParticipants')[0];
@@ -70,10 +70,6 @@ exports.ExposeStore = (moduleRaidStr) => {
 
 exports.LoadUtils = () => {
     window.WWebJS = {};
-
-    if(!window.Store.genId) {
-        window.Store.genId = window.Store.MsgKey.newId;
-    }
 
     window.WWebJS.sendSeen = async (chatId) => {
         let chat = window.Store.Chat.get(chatId);

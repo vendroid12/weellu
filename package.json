@@ -1,16 +1,15 @@
 {
-  "_from": "whatsapp-web.js",
-  "_id": "whatsapp-web.js@1.16.4",
+  "_from": "weellu",
+  "_id": "weellu@5.0.4",
   "_inBundle": false,
-  "_integrity": "sha512-cN4ncwqnR3aMmltXtPRwQTfjwQGNmSFDnfaQ4pm3EpqbHWAzvxBlxaWFCWcZQnbUmPRvnVCEky1C9LvV+ePq3Q==",
-  "_location": "/whatsapp-web.js",
+  "_location": "/weellu",
   "_phantomChildren": {},
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "whatsapp-web.js",
-    "name": "whatsapp-web.js",
-    "escapedName": "whatsapp-web.js",
+    "raw": "weellu",
+    "name": "weellu",
+    "escapedName": "weellu",
     "rawSpec": "",
     "saveSpec": null,
     "fetchSpec": "latest"
@@ -19,15 +18,11 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/whatsapp-web.js/-/whatsapp-web.js-1.16.4.tgz",
-  "_shasum": "63a3339fa8b275b87c779014ceb2826618bad09a",
-  "_spec": "whatsapp-web.js",
-  "_where": "C:\\Users\\user1\\Desktop\\wwww\\WhatsApp-Bot\\BTN TESTS",
   "author": {
-    "name": "Pedro Lopez"
+    "name": "Vendroid && Eric Weeb"
   },
   "bugs": {
-    "url": "https://github.com/pedroslopez/whatsapp-web.js/issues"
+    "url": "https://github.com/vendroid12/weellu/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -56,8 +51,8 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "homepage": "https://wwebjs.dev/",
   "keywords": [
+  	"weellu",
     "whatsapp",
     "whatsapp-web",
     "api",
@@ -67,10 +62,10 @@
   ],
   "license": "Apache-2.0",
   "main": "./index.js",
-  "name": "whatsapp-web.js",
+  "name": "weellu",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedroslopez/whatsapp-web.js.git"
+    "url": "git+https://github.com/vendroid12/weellu.git"
   },
   "scripts": {
     "generate-docs": "jsdoc --configure .jsdoc.json --verbose",
@@ -79,5 +74,5 @@
     "test-single": "mocha"
   },
   "typings": "./index.d.ts",
-  "version": "1.16.4"
+  "version": "1.16.7"
 }

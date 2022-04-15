@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/whatsapp-web.js.svg)](https://www.npmjs.com/package/whatsapp-web.js) [![Depfu](https://badges.depfu.com/badges/4a65a0de96ece65fdf39e294e0c8dcba/overview.svg)](https://depfu.com/github/pedroslopez/whatsapp-web.js?project_id=9765) ![WhatsApp_Web 2.2206.5](https://img.shields.io/badge/WhatsApp_Web-2.2206.5-brightgreen.svg) [![Discord Chat](https://img.shields.io/discord/698610475432411196.svg?logo=discord)](https://discord.gg/H7DqQs4)  
 
-# whatsapp-web.js
-A WhatsApp API client that connects through the WhatsApp Web browser app
+# Weellu
+An extended module for whatsapp-web.js a WhatsApp API client that connects through the WhatsApp Web browser app
 
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 
@@ -16,14 +16,14 @@ It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocke
 
 ## Installation
 
-The module is now available on npm! `npm i whatsapp-web.js`
+The module is now available on npm! `npm i weellu`
 
-Please note that Node v12+ is required.
+Please note that Node v13+ is required.
 
 ## Example usage
 
 ```js
-const { Client } = require('whatsapp-web.js');
+const { Client } = require('weellu');
 
 const client = new Client();
 
@@ -56,6 +56,9 @@ For more information on saving and restoring sessions, check out the available [
 | ------------- | ------------- |
 | Multi Device  | ✅  |
 | Send messages  | ✅  |
+| Reply messages (New)  | ✅  | New
+| Delete messages (New) | ✅  | New
+| Support Backend (New) | ✅  |  New
 | Receive messages  | ✅  |
 | Send media (images/audio/documents)  | ✅  |
 | Send media (video)  | ✅ [(requires google chrome)](https://wwebjs.dev/guide/handling-attachments.html#caveat-for-sending-videos-and-gifs)  |
@@ -101,7 +104,7 @@ This project is not affiliated, associated, authorized, endorsed by, or in any w
 
 ## License
 
-Copyright 2019 Pedro S Lopez
+Copyright 2022 Eric weeb
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this project except in compliance with the License.
