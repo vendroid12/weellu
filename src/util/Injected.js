@@ -40,11 +40,8 @@ exports.ExposeStore = (moduleRaidStr) => {
     window.Store.VCard = window.mR.findModule('vcardFromContactModel')[0];
     window.Store.Wap = window.mR.findModule('queryLinkPreview')[0].default;
     window.Store.WidFactory = window.mR.findModule('createWid')[0];
-<<<<<<< HEAD
     window.Store.ProfilePic = window.mR.findModule('profilePicResync')[0];
-=======
     window.Store.getProfilePicFull = window.mR.findModule('profilePicFind')[0].profilePicFind;
->>>>>>> 70862a57ad41ac400735c8b04a3025ad1782fc03
     window.Store.PresenceUtils = window.mR.findModule('sendPresenceAvailable')[0];
     window.Store.ChatState = window.mR.findModule('sendChatStateComposing')[0];
     window.Store.GroupParticipants = window.mR.findModule('sendPromoteParticipants')[0];

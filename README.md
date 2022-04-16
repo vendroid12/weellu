@@ -23,9 +23,10 @@ Please note that Node v13+ is required.
 ## Example usage
 
 ```js
-const { Client } = require('weellu');
+const { Client, WelluMessage } = require('weellu');
 
 const client = new Client();
+let socket;
 
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
@@ -34,6 +35,8 @@ client.on('qr', (qr) => {
 
 client.on('ready', () => {
     console.log('Client is ready!');
+    // Connect to  Websocket
+    socket = io(SOCKET_URl, {transports: ['websocket']});
 });
 
 client.on('message', msg => {
@@ -42,8 +45,32 @@ client.on('message', msg => {
     }
 });
 
+//depending on your configuration of your nodeApplication
+//By Socket.io
+socket.on('message', msg => {
+	//whatsApp message from your database or json file
+    let wMessage = new WelluMessage(client, msg);
+    wMessage.reply("HI");
+});
+
+socket.on('deleteMessage', msg => {
+	//whatsApp message from your database or json file
+    let wMessage = new WelluMessage(client, msg);
+    //delete message
+    wMessage.delete(true);
+});
+
+//By express route
+app.get('/message', (req, res) => {
+  let msg = req.body.message;//whatsApp message format
+  let wMessage = new WelluMessage(client, msg);
+    wMessage.reply("HI");
+})
+
 client.initialize();
 ```
+
+Take a look at [Message](https://docs.wwebjs.dev/Message.html) that explains clearly how you should format your message object, be for storing in your database or just a json file.
 
 Take a look at [example.js](https://github.com/pedroslopez/whatsapp-web.js/blob/master/example.js) for another example with more use cases.
 
